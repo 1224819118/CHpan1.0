@@ -114,6 +114,8 @@ public class FileController {
     }
     /**
      * 删除文件或者文件夹，如果是文件夹则删除目录下的所有文件
+     * 这里的删除只是逻辑上的删除真正的删除会通过定时任务，这是为了给人们误删解决问题
+     *
      */
     @RequestMapping("/deleteFile/{targetFileId}")
     public String deleteFile(@PathVariable Integer targetFileId){

@@ -1,11 +1,13 @@
 package com.caohao.filepan;
 
-import com.caohao.filepan.entity.File;
 import com.caohao.filepan.service.FileService;
 import com.caohao.filepan.service.UserService;
+import com.caohao.filepan.util.MyFileUtil;
 import org.junit.jupiter.api.Test;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.test.context.SpringBootTest;
+
+import java.io.File;
 
 @SpringBootTest
 class FilepanApplicationTests {
@@ -15,8 +17,8 @@ class FilepanApplicationTests {
 
     @Test
     void contextLoads() {
-        File byId = fileService.getById(1);
-        System.out.println(byId);
+        boolean b = MyFileUtil.deleteFileByURI("F:\\FTPFile\\caohao\\11");
+        System.out.println(b);
     }
 
 }

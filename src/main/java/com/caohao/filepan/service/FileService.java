@@ -1,11 +1,16 @@
 package com.caohao.filepan.service;
 
+import com.baomidou.mybatisplus.core.conditions.query.QueryWrapper;
 import com.baomidou.mybatisplus.extension.service.impl.ServiceImpl;
 import com.caohao.filepan.dao.FileDao;
 import com.caohao.filepan.entity.File;
+import com.caohao.filepan.util.MyFileUtil;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Value;
+import org.springframework.scheduling.annotation.Scheduled;
 import org.springframework.stereotype.Service;
+
+import java.util.List;
 
 @Service("fileService")
 public class FileService extends ServiceImpl<FileDao, File> {
@@ -47,4 +52,5 @@ public class FileService extends ServiceImpl<FileDao, File> {
         System.out.println("getPathByFileId----->"+src.toString());
         return src.toString();
     }
+
 }

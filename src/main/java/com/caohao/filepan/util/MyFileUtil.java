@@ -11,6 +11,7 @@ import org.springframework.core.io.InputStreamResource;
 import org.springframework.http.HttpHeaders;
 import org.springframework.http.MediaType;
 import org.springframework.http.ResponseEntity;
+import org.springframework.scheduling.annotation.Scheduled;
 import org.springframework.stereotype.Component;
 import org.springframework.web.multipart.MultipartFile;
 
@@ -101,13 +102,62 @@ public class MyFileUtil {
     /**
      * 文件删除
      */
-    public static String deleteFileByURI(String targetFileUui){
-        java.io.File targetFile = new java.io.File(targetFileUui);
-        boolean deleteFileStatus = targetFile.delete();
-        if (deleteFileStatus){
-            return "success";
+    public static boolean deleteFileByURI(String targetFileUri){
+        boolean flag = false;
+        java.io.File targetFile = new java.io.File(targetFileUri);
+        if (!targetFile.exists()){
+            return flag;
+        }
+        if (targetFile.isFile()){
+            flag = deleteFile(targetFileUri);
         }else {
-            return "false";
+            flag = deleteFileDirector(targetFileUri);
+        }
+        return flag;
+    }
+    /**
+     * 删除文件
+     */
+    public static boolean deleteFile(String path){
+        boolean flag = false;
+        java.io.File file = new java.io.File(path);
+        if (file.isFile()&&file.exists()){
+            flag = file.delete();
+        }
+        return flag;
+    }
+    /**
+     * 删除文件夹包括文件夹下的文件
+     * 先判断这个文件是不是文件夹和是否存在
+     * 满足以上条件后，获取这个目录下的所有文件和文件夹
+     * 遍历文件链表，对每一个文件都判断如果是文件就调用文件删除方法，如果是文件夹就在进入这个文件夹重复上述行为
+     */
+    public static boolean deleteFileDirector(String path){
+        boolean flag = true;
+        java.io.File file = new java.io.File(path);
+        if (!file.exists()||!file.isDirectory()){
+            return false;
+        }
+        java.io.File[] files = file.listFiles();
+        for (int i = 0; i < files.length; i++) {
+            java.io.File nowFile = files[i];
+            if (nowFile.isFile()){//如果是文件
+                flag = deleteFile(nowFile.getAbsolutePath());
+            }else {//如果是文件夹
+                flag = deleteFileDirector(nowFile.getAbsolutePath());//递归
+                if (!flag){
+                    break;
+                }
+            }
+        }
+        if (!flag){
+            return false;
+        }
+        //删除当前目录
+        if (file.delete()) {
+            return true;
+        } else {
+            return false;
         }
     }
     /**
@@ -131,4 +181,5 @@ public class MyFileUtil {
                 .body(new InputStreamResource(fileSystemResource.getInputStream()));
 
     }
+
 }
