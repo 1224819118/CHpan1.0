@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.w3.org/1999/xhtml">
+<head th:replace="_fragments :: head(~{::title})">
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<!--导航-->
+<nav th:replace="_fragments :: menu(2)" class="ui inverted attached segment m-padded-tb-mini m-shadow-small">
+</nav>
+<div id="table-container">
+    <table th:fragment="blogList" class="ui compact teal table">
+        <tbody>
+        <tr>
+            <td>昵称</td>
+            <td th:text="${user.nickName}"></td>
+        </tr>
+        <tr>
+            <td>
+                <form id="changePassword" action="" method="post" th:action="@{/changePassword}">
+                    <input type="text" name="newPassword" id="password" placeholder="输入修改后的密码">
+                    <input type="submit" value="修改密码">
+                </form>
+            </td>
+        </tr>
+        <tr>
+            <td>邮箱</td>
+            <td th:text="${user.emial}"></td>
+            <td>
+                <form id="changeEmail" action="" method="post" th:action="@{/changeEmial}">
+                    <input type="text" name="newEmial" id="Email" placeholder="输入修改后的邮箱">
+                    <input type="submit" value="修改邮箱">
+                </form>
+            </td>
+        </tr>
+        </tbody>
+    </table>
+</div>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<footer th:replace="_fragments :: footer"></footer>
+<!--/*/<th:block th:replace="_fragments :: script">/*/-->
+<script src="https://cdn.jsdelivr.net/npm/jquery@3.2/dist/jquery.min.js"></script>
+<script src="https://cdn.jsdelivr.net/semantic-ui/2.2.4/semantic.min.js"></script>
+<!--/*/</th:block>/*/-->
+</body>
+</html>

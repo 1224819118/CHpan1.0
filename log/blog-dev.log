@@ -1,0 +1,438 @@
+2020-03-21 11:39:47.124  INFO 12024 --- [restartedMain] com.caohao.filepan.FilepanApplication    : Starting FilepanApplication on DESKTOP-IVAJA2P with PID 12024 (started by ASUS in F:\SSM项目实战练习\filepan)
+2020-03-21 11:39:47.135  INFO 12024 --- [restartedMain] com.caohao.filepan.FilepanApplication    : The following profiles are active: dev
+2020-03-21 11:39:47.636  INFO 12024 --- [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2020-03-21 11:39:47.637  INFO 12024 --- [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+2020-03-21 11:39:51.053  INFO 12024 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 9001 (http)
+2020-03-21 11:39:51.061  INFO 12024 --- [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2020-03-21 11:39:51.061  INFO 12024 --- [restartedMain] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.31]
+2020-03-21 11:39:51.206  INFO 12024 --- [restartedMain] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2020-03-21 11:39:51.206  INFO 12024 --- [restartedMain] o.s.web.context.ContextLoader            : Root WebApplicationContext: initialization completed in 3568 ms
+2020-03-21 11:39:55.170  INFO 12024 --- [restartedMain] f.a.AutowiredAnnotationBeanPostProcessor : Autowired annotation is not supported on static fields: private static com.caohao.filepan.service.FileService com.caohao.filepan.util.MyFileUtil.fileService
+2020-03-21 11:39:55.531  INFO 12024 --- [restartedMain] o.s.s.concurrent.ThreadPoolTaskExecutor  : Initializing ExecutorService 'applicationTaskExecutor'
+2020-03-21 11:39:55.661  INFO 12024 --- [restartedMain] o.s.b.a.w.s.WelcomePageHandlerMapping    : Adding welcome page template: index
+2020-03-21 11:39:56.114  INFO 12024 --- [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : LiveReload server is running on port 35729
+2020-03-21 11:39:56.177  INFO 12024 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 9001 (http) with context path ''
+2020-03-21 11:39:56.180  INFO 12024 --- [restartedMain] com.caohao.filepan.FilepanApplication    : Started FilepanApplication in 11.296 seconds (JVM running for 15.77)
+2020-03-21 11:40:34.717  INFO 12024 --- [http-nio-9001-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2020-03-21 11:40:34.718  INFO 12024 --- [http-nio-9001-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2020-03-21 11:40:34.729  INFO 12024 --- [http-nio-9001-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 11 ms
+2020-03-21 11:40:34.784  INFO 12024 --- [http-nio-9001-exec-1] com.caohao.filepan.aspect.LogAspect      : Request : {url='http://localhost:9001/login', ip='127.0.0.1', classMethod='com.caohao.filepan.controller.UserController.login', args=[]}
+2020-03-21 11:40:34.791  INFO 12024 --- [http-nio-9001-exec-1] com.caohao.filepan.aspect.LogAspect      : Result : login
+2020-03-21 11:40:41.253  INFO 12024 --- [http-nio-9001-exec-3] com.caohao.filepan.aspect.LogAspect      : Request : {url='http://localhost:9001/loginCheck', ip='127.0.0.1', classMethod='com.caohao.filepan.controller.UserController.loginCheck', args=[caohao, 6222688, org.apache.catalina.session.StandardSessionFacade@75d7b358, {}]}
+2020-03-21 11:40:41.430  INFO 12024 --- [http-nio-9001-exec-3] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2020-03-21 11:40:41.769  INFO 12024 --- [http-nio-9001-exec-3] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2020-03-21 11:40:41.837  INFO 12024 --- [http-nio-9001-exec-3] com.caohao.filepan.aspect.LogAspect      : Result : redirect:/login
+2020-03-21 11:40:41.862  INFO 12024 --- [http-nio-9001-exec-4] com.caohao.filepan.aspect.LogAspect      : Request : {url='http://localhost:9001/login;jsessionid=15261921ED3FFA489DB569F484A70749', ip='127.0.0.1', classMethod='com.caohao.filepan.controller.UserController.login', args=[]}
+2020-03-21 11:40:41.862  INFO 12024 --- [http-nio-9001-exec-4] com.caohao.filepan.aspect.LogAspect      : Result : login
+2020-03-21 11:40:48.721  INFO 12024 --- [http-nio-9001-exec-6] com.caohao.filepan.aspect.LogAspect      : Request : {url='http://localhost:9001/loginCheck', ip='127.0.0.1', classMethod='com.caohao.filepan.controller.UserController.loginCheck', args=[caohao, 123456, org.apache.catalina.session.StandardSessionFacade@75d7b358, {}]}
+2020-03-21 11:40:48.727  INFO 12024 --- [http-nio-9001-exec-6] com.caohao.filepan.aspect.LogAspect      : Result : redirect:/index
+2020-03-21 11:40:48.745  INFO 12024 --- [http-nio-9001-exec-7] com.caohao.filepan.aspect.LogAspect      : Request : {url='http://localhost:9001/index', ip='127.0.0.1', classMethod='com.caohao.filepan.controller.FileController.index', args=[org.apache.catalina.session.StandardSessionFacade@75d7b358, {}]}
+2020-03-21 11:40:48.764  INFO 12024 --- [http-nio-9001-exec-7] com.caohao.filepan.aspect.LogAspect      : Result : index
+2020-03-21 11:40:57.272  INFO 12024 --- [http-nio-9001-exec-9] com.caohao.filepan.aspect.LogAspect      : Request : {url='http://localhost:9001/myInfo', ip='127.0.0.1', classMethod='com.caohao.filepan.controller.UserController.myInfo', args=[{}, org.apache.catalina.session.StandardSessionFacade@75d7b358]}
+2020-03-21 11:40:57.272  INFO 12024 --- [http-nio-9001-exec-9] com.caohao.filepan.aspect.LogAspect      : Result : myinfo
+2020-03-21 11:41:23.079  INFO 12024 --- [http-nio-9001-exec-1] com.caohao.filepan.aspect.LogAspect      : Request : {url='http://localhost:9001/changeEmial', ip='127.0.0.1', classMethod='com.caohao.filepan.controller.UserController.changeEmail', args=[1224819119@qq.com, org.apache.catalina.session.StandardSessionFacade@75d7b358]}
+2020-03-21 11:41:23.101  INFO 12024 --- [http-nio-9001-exec-1] com.caohao.filepan.aspect.LogAspect      : Result : redirect:/login
+2020-03-21 11:41:23.126  INFO 12024 --- [http-nio-9001-exec-2] com.caohao.filepan.aspect.LogAspect      : Request : {url='http://localhost:9001/login', ip='127.0.0.1', classMethod='com.caohao.filepan.controller.UserController.login', args=[]}
+2020-03-21 11:41:23.127  INFO 12024 --- [http-nio-9001-exec-2] com.caohao.filepan.aspect.LogAspect      : Result : login
+2020-03-21 12:01:58.188  INFO 8136 --- [restartedMain] com.caohao.filepan.FilepanApplication    : Starting FilepanApplication on DESKTOP-IVAJA2P with PID 8136 (started by ASUS in F:\SSM项目实战练习\filepan)
+2020-03-21 12:01:58.191  INFO 8136 --- [restartedMain] com.caohao.filepan.FilepanApplication    : The following profiles are active: dev
+2020-03-21 12:01:58.253  INFO 8136 --- [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2020-03-21 12:01:58.254  INFO 8136 --- [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+2020-03-21 12:01:59.495  INFO 8136 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 9001 (http)
+2020-03-21 12:01:59.502  INFO 8136 --- [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2020-03-21 12:01:59.502  INFO 8136 --- [restartedMain] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.31]
+2020-03-21 12:01:59.592  INFO 8136 --- [restartedMain] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2020-03-21 12:01:59.592  INFO 8136 --- [restartedMain] o.s.web.context.ContextLoader            : Root WebApplicationContext: initialization completed in 1338 ms
+2020-03-21 12:02:02.797  INFO 8136 --- [restartedMain] f.a.AutowiredAnnotationBeanPostProcessor : Autowired annotation is not supported on static fields: private static com.caohao.filepan.service.FileService com.caohao.filepan.util.MyFileUtil.fileService
+2020-03-21 12:02:02.990  INFO 8136 --- [restartedMain] o.s.s.concurrent.ThreadPoolTaskExecutor  : Initializing ExecutorService 'applicationTaskExecutor'
+2020-03-21 12:02:03.079  INFO 8136 --- [restartedMain] o.s.b.a.w.s.WelcomePageHandlerMapping    : Adding welcome page template: index
+2020-03-21 12:02:03.321  INFO 8136 --- [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : LiveReload server is running on port 35729
+2020-03-21 12:02:03.365  INFO 8136 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 9001 (http) with context path ''
+2020-03-21 12:02:03.368  INFO 8136 --- [restartedMain] com.caohao.filepan.FilepanApplication    : Started FilepanApplication in 5.686 seconds (JVM running for 8.144)
+2020-03-21 12:03:51.602  INFO 8136 --- [http-nio-9001-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2020-03-21 12:03:51.603  INFO 8136 --- [http-nio-9001-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2020-03-21 12:03:51.614  INFO 8136 --- [http-nio-9001-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 11 ms
+2020-03-21 12:03:51.641  INFO 8136 --- [http-nio-9001-exec-1] com.caohao.filepan.aspect.LogAspect      : Request : {url='http://localhost:9001/loginCheck', ip='127.0.0.1', classMethod='com.caohao.filepan.controller.UserController.loginCheck', args=[caohao, 123456, org.apache.catalina.session.StandardSessionFacade@1a7bdd44, {}]}
+2020-03-21 12:03:51.697  INFO 8136 --- [http-nio-9001-exec-1] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2020-03-21 12:03:51.808  INFO 8136 --- [http-nio-9001-exec-1] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2020-03-21 12:03:51.861  INFO 8136 --- [http-nio-9001-exec-1] com.caohao.filepan.aspect.LogAspect      : Result : redirect:/index
+2020-03-21 12:03:51.895  INFO 8136 --- [http-nio-9001-exec-2] com.caohao.filepan.aspect.LogAspect      : Request : {url='http://localhost:9001/index', ip='127.0.0.1', classMethod='com.caohao.filepan.controller.FileController.index', args=[org.apache.catalina.session.StandardSessionFacade@1a7bdd44, {}]}
+2020-03-21 12:03:51.913  INFO 8136 --- [http-nio-9001-exec-2] com.caohao.filepan.aspect.LogAspect      : Result : index
+2020-03-21 12:03:54.447  INFO 8136 --- [http-nio-9001-exec-4] com.caohao.filepan.aspect.LogAspect      : Request : {url='http://localhost:9001/myInfo', ip='127.0.0.1', classMethod='com.caohao.filepan.controller.UserController.myInfo', args=[{}, org.apache.catalina.session.StandardSessionFacade@1a7bdd44]}
+2020-03-21 12:03:54.447  INFO 8136 --- [http-nio-9001-exec-4] com.caohao.filepan.aspect.LogAspect      : Result : myinfo
+2020-03-21 12:07:02.339  INFO 8136 --- [http-nio-9001-exec-7] com.caohao.filepan.aspect.LogAspect      : Request : {url='http://localhost:9001/index', ip='127.0.0.1', classMethod='com.caohao.filepan.controller.FileController.index', args=[org.apache.catalina.session.StandardSessionFacade@1a7bdd44, {}]}
+2020-03-21 12:07:02.347  INFO 8136 --- [http-nio-9001-exec-7] com.caohao.filepan.aspect.LogAspect      : Result : index
+2020-03-21 12:07:34.305  INFO 8136 --- [http-nio-9001-exec-9] com.caohao.filepan.aspect.LogAspect      : Request : {url='http://localhost:9001/myInfo', ip='127.0.0.1', classMethod='com.caohao.filepan.controller.UserController.myInfo', args=[{}, org.apache.catalina.session.StandardSessionFacade@1a7bdd44]}
+2020-03-21 12:07:34.305  INFO 8136 --- [http-nio-9001-exec-9] com.caohao.filepan.aspect.LogAspect      : Result : myinfo
+2020-03-21 12:07:38.131  INFO 8136 --- [http-nio-9001-exec-1] com.caohao.filepan.aspect.LogAspect      : Request : {url='http://localhost:9001/about', ip='127.0.0.1', classMethod='com.caohao.filepan.controller.UserController.aboutPan', args=[]}
+2020-03-21 12:07:38.132  INFO 8136 --- [http-nio-9001-exec-1] com.caohao.filepan.aspect.LogAspect      : Result : about
+2020-03-21 12:10:37.866  INFO 8136 --- [http-nio-9001-exec-6] com.caohao.filepan.aspect.LogAspect      : Request : {url='http://localhost:9001/index', ip='127.0.0.1', classMethod='com.caohao.filepan.controller.FileController.index', args=[org.apache.catalina.session.StandardSessionFacade@1a7bdd44, {}]}
+2020-03-21 12:10:37.874  INFO 8136 --- [http-nio-9001-exec-6] com.caohao.filepan.aspect.LogAspect      : Result : index
+2020-03-21 12:10:39.645  INFO 8136 --- [http-nio-9001-exec-8] com.caohao.filepan.aspect.LogAspect      : Request : {url='http://localhost:9001/myInfo', ip='127.0.0.1', classMethod='com.caohao.filepan.controller.UserController.myInfo', args=[{}, org.apache.catalina.session.StandardSessionFacade@1a7bdd44]}
+2020-03-21 12:10:39.645  INFO 8136 --- [http-nio-9001-exec-8] com.caohao.filepan.aspect.LogAspect      : Result : myinfo
+2020-03-21 12:10:46.686  INFO 8136 --- [http-nio-9001-exec-10] com.caohao.filepan.aspect.LogAspect      : Request : {url='http://localhost:9001/about', ip='127.0.0.1', classMethod='com.caohao.filepan.controller.UserController.aboutPan', args=[]}
+2020-03-21 12:10:46.686  INFO 8136 --- [http-nio-9001-exec-10] com.caohao.filepan.aspect.LogAspect      : Result : about
+2020-03-21 12:11:05.883  INFO 8136 --- [http-nio-9001-exec-3] com.caohao.filepan.aspect.LogAspect      : Request : {url='http://localhost:9001/myInfo', ip='127.0.0.1', classMethod='com.caohao.filepan.controller.UserController.myInfo', args=[{}, org.apache.catalina.session.StandardSessionFacade@1a7bdd44]}
+2020-03-21 12:11:05.883  INFO 8136 --- [http-nio-9001-exec-3] com.caohao.filepan.aspect.LogAspect      : Result : myinfo
+2020-03-21 12:11:07.289  INFO 8136 --- [http-nio-9001-exec-5] com.caohao.filepan.aspect.LogAspect      : Request : {url='http://localhost:9001/about', ip='127.0.0.1', classMethod='com.caohao.filepan.controller.UserController.aboutPan', args=[]}
+2020-03-21 12:11:07.290  INFO 8136 --- [http-nio-9001-exec-5] com.caohao.filepan.aspect.LogAspect      : Result : about
+2020-03-21 12:11:13.705  INFO 8136 --- [http-nio-9001-exec-8] com.caohao.filepan.aspect.LogAspect      : Request : {url='http://localhost:9001/about', ip='127.0.0.1', classMethod='com.caohao.filepan.controller.UserController.aboutPan', args=[]}
+2020-03-21 12:11:13.706  INFO 8136 --- [http-nio-9001-exec-8] com.caohao.filepan.aspect.LogAspect      : Result : about
+2020-03-21 12:13:13.003  INFO 8136 --- [http-nio-9001-exec-3] com.caohao.filepan.aspect.LogAspect      : Request : {url='http://localhost:9001/index', ip='127.0.0.1', classMethod='com.caohao.filepan.controller.FileController.index', args=[org.apache.catalina.session.StandardSessionFacade@1a7bdd44, {}]}
+2020-03-21 12:13:13.007  INFO 8136 --- [http-nio-9001-exec-3] com.caohao.filepan.aspect.LogAspect      : Result : index
+2020-03-21 12:13:18.839  INFO 8136 --- [http-nio-9001-exec-5] com.caohao.filepan.aspect.LogAspect      : Request : {url='http://localhost:9001/logout', ip='127.0.0.1', classMethod='com.caohao.filepan.controller.UserController.logout', args=[org.apache.catalina.session.StandardSessionFacade@1a7bdd44]}
+2020-03-21 12:13:18.839  INFO 8136 --- [http-nio-9001-exec-5] com.caohao.filepan.aspect.LogAspect      : Result : redirect:/login
+2020-03-21 12:13:18.861  INFO 8136 --- [http-nio-9001-exec-6] com.caohao.filepan.aspect.LogAspect      : Request : {url='http://localhost:9001/login', ip='127.0.0.1', classMethod='com.caohao.filepan.controller.UserController.login', args=[]}
+2020-03-21 12:13:18.861  INFO 8136 --- [http-nio-9001-exec-6] com.caohao.filepan.aspect.LogAspect      : Result : login
+2020-03-21 12:13:24.261  INFO 8136 --- [http-nio-9001-exec-8] com.caohao.filepan.aspect.LogAspect      : Request : {url='http://localhost:9001/loginCheck', ip='127.0.0.1', classMethod='com.caohao.filepan.controller.UserController.loginCheck', args=[caohao, 123456, org.apache.catalina.session.StandardSessionFacade@1a7bdd44, {}]}
+2020-03-21 12:13:24.266  INFO 8136 --- [http-nio-9001-exec-8] com.caohao.filepan.aspect.LogAspect      : Result : redirect:/index
+2020-03-21 12:13:24.280  INFO 8136 --- [http-nio-9001-exec-10] com.caohao.filepan.aspect.LogAspect      : Request : {url='http://localhost:9001/index', ip='127.0.0.1', classMethod='com.caohao.filepan.controller.FileController.index', args=[org.apache.catalina.session.StandardSessionFacade@1a7bdd44, {}]}
+2020-03-21 12:13:24.284  INFO 8136 --- [http-nio-9001-exec-10] com.caohao.filepan.aspect.LogAspect      : Result : index
+2020-03-21 12:13:26.217  INFO 8136 --- [http-nio-9001-exec-1] com.caohao.filepan.aspect.LogAspect      : Request : {url='http://localhost:9001/myInfo', ip='127.0.0.1', classMethod='com.caohao.filepan.controller.UserController.myInfo', args=[{}, org.apache.catalina.session.StandardSessionFacade@1a7bdd44]}
+2020-03-21 12:13:26.218  INFO 8136 --- [http-nio-9001-exec-1] com.caohao.filepan.aspect.LogAspect      : Result : myinfo
+2020-03-21 12:13:28.675  INFO 8136 --- [http-nio-9001-exec-3] com.caohao.filepan.aspect.LogAspect      : Request : {url='http://localhost:9001/about', ip='127.0.0.1', classMethod='com.caohao.filepan.controller.UserController.aboutPan', args=[]}
+2020-03-21 12:13:28.675  INFO 8136 --- [http-nio-9001-exec-3] com.caohao.filepan.aspect.LogAspect      : Result : about
+2020-03-21 12:13:56.886  INFO 8136 --- [http-nio-9001-exec-6] com.caohao.filepan.aspect.LogAspect      : Request : {url='http://localhost:9001/about', ip='127.0.0.1', classMethod='com.caohao.filepan.controller.UserController.aboutPan', args=[]}
+2020-03-21 12:13:56.887  INFO 8136 --- [http-nio-9001-exec-6] com.caohao.filepan.aspect.LogAspect      : Result : about
+2020-03-21 12:17:04.414  INFO 8136 --- [http-nio-9001-exec-1] com.caohao.filepan.aspect.LogAspect      : Request : {url='http://localhost:9001/index', ip='127.0.0.1', classMethod='com.caohao.filepan.controller.FileController.index', args=[org.apache.catalina.session.StandardSessionFacade@1a7bdd44, {}]}
+2020-03-21 12:17:04.420  INFO 8136 --- [http-nio-9001-exec-1] com.caohao.filepan.aspect.LogAspect      : Result : index
+2020-03-21 12:17:08.910  INFO 8136 --- [http-nio-9001-exec-4] com.caohao.filepan.aspect.LogAspect      : Request : {url='http://localhost:9001/index', ip='127.0.0.1', classMethod='com.caohao.filepan.controller.FileController.index', args=[org.apache.catalina.session.StandardSessionFacade@1a7bdd44, {}]}
+2020-03-21 12:17:08.915  INFO 8136 --- [http-nio-9001-exec-4] com.caohao.filepan.aspect.LogAspect      : Result : index
+2020-03-21 12:17:56.322  INFO 8136 --- [http-nio-9001-exec-6] com.caohao.filepan.aspect.LogAspect      : Request : {url='http://localhost:9001/about', ip='127.0.0.1', classMethod='com.caohao.filepan.controller.UserController.aboutPan', args=[]}
+2020-03-21 12:17:56.322  INFO 8136 --- [http-nio-9001-exec-6] com.caohao.filepan.aspect.LogAspect      : Result : about
+2020-03-21 12:18:03.115  INFO 8136 --- [http-nio-9001-exec-10] com.caohao.filepan.aspect.LogAspect      : Request : {url='http://localhost:9001/about', ip='127.0.0.1', classMethod='com.caohao.filepan.controller.UserController.aboutPan', args=[]}
+2020-03-21 12:18:03.115  INFO 8136 --- [http-nio-9001-exec-10] com.caohao.filepan.aspect.LogAspect      : Result : about
+2020-03-21 12:18:22.418  INFO 8136 --- [http-nio-9001-exec-2] com.caohao.filepan.aspect.LogAspect      : Request : {url='http://localhost:9001/myInfo', ip='127.0.0.1', classMethod='com.caohao.filepan.controller.UserController.myInfo', args=[{}, org.apache.catalina.session.StandardSessionFacade@1a7bdd44]}
+2020-03-21 12:18:22.418  INFO 8136 --- [http-nio-9001-exec-2] com.caohao.filepan.aspect.LogAspect      : Result : myinfo
+2020-03-21 12:19:21.039  INFO 8136 --- [http-nio-9001-exec-5] com.caohao.filepan.aspect.LogAspect      : Request : {url='http://localhost:9001/changePassword', ip='127.0.0.1', classMethod='com.caohao.filepan.controller.UserController.changePassword', args=[1234567, org.apache.catalina.session.StandardSessionFacade@1a7bdd44]}
+2020-03-21 12:19:21.055  INFO 8136 --- [http-nio-9001-exec-5] com.caohao.filepan.aspect.LogAspect      : Result : redirect:/login
+2020-03-21 12:19:21.071  INFO 8136 --- [http-nio-9001-exec-6] com.caohao.filepan.aspect.LogAspect      : Request : {url='http://localhost:9001/login', ip='127.0.0.1', classMethod='com.caohao.filepan.controller.UserController.login', args=[]}
+2020-03-21 12:19:21.072  INFO 8136 --- [http-nio-9001-exec-6] com.caohao.filepan.aspect.LogAspect      : Result : login
+2020-03-21 12:19:22.955  INFO 8136 --- [http-nio-9001-exec-8] com.caohao.filepan.aspect.LogAspect      : Request : {url='http://localhost:9001/registerHtml', ip='127.0.0.1', classMethod='com.caohao.filepan.controller.UserController.registerHtml', args=[]}
+2020-03-21 12:19:22.955  INFO 8136 --- [http-nio-9001-exec-8] com.caohao.filepan.aspect.LogAspect      : Result : register
+2020-03-21 12:23:48.281  INFO 1136 --- [restartedMain] com.caohao.filepan.FilepanApplication    : Starting FilepanApplication on DESKTOP-IVAJA2P with PID 1136 (started by ASUS in F:\SSM项目实战练习\filepan)
+2020-03-21 12:23:48.288  INFO 1136 --- [restartedMain] com.caohao.filepan.FilepanApplication    : The following profiles are active: dev
+2020-03-21 12:23:48.331  INFO 1136 --- [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2020-03-21 12:23:48.331  INFO 1136 --- [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+2020-03-21 12:23:49.573  INFO 1136 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 9001 (http)
+2020-03-21 12:23:49.581  INFO 1136 --- [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2020-03-21 12:23:49.581  INFO 1136 --- [restartedMain] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.31]
+2020-03-21 12:23:49.671  INFO 1136 --- [restartedMain] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2020-03-21 12:23:49.672  INFO 1136 --- [restartedMain] o.s.web.context.ContextLoader            : Root WebApplicationContext: initialization completed in 1341 ms
+2020-03-21 12:23:53.068  INFO 1136 --- [restartedMain] f.a.AutowiredAnnotationBeanPostProcessor : Autowired annotation is not supported on static fields: private static com.caohao.filepan.service.FileService com.caohao.filepan.util.MyFileUtil.fileService
+2020-03-21 12:23:53.294  INFO 1136 --- [restartedMain] o.s.s.concurrent.ThreadPoolTaskExecutor  : Initializing ExecutorService 'applicationTaskExecutor'
+2020-03-21 12:23:53.394  INFO 1136 --- [restartedMain] o.s.b.a.w.s.WelcomePageHandlerMapping    : Adding welcome page template: index
+2020-03-21 12:23:53.627  INFO 1136 --- [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : LiveReload server is running on port 35729
+2020-03-21 12:23:53.673  INFO 1136 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 9001 (http) with context path ''
+2020-03-21 12:23:53.676  INFO 1136 --- [restartedMain] com.caohao.filepan.FilepanApplication    : Started FilepanApplication in 6.017 seconds (JVM running for 8.464)
+2020-03-21 12:24:10.804  INFO 1136 --- [http-nio-9001-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2020-03-21 12:24:10.805  INFO 1136 --- [http-nio-9001-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2020-03-21 12:24:10.822  INFO 1136 --- [http-nio-9001-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 17 ms
+2020-03-21 12:24:10.846  INFO 1136 --- [http-nio-9001-exec-1] com.caohao.filepan.aspect.LogAspect      : Request : {url='http://localhost:9001/registerHtml', ip='127.0.0.1', classMethod='com.caohao.filepan.controller.UserController.registerHtml', args=[]}
+2020-03-21 12:24:10.853  INFO 1136 --- [http-nio-9001-exec-1] com.caohao.filepan.aspect.LogAspect      : Result : register
+2020-03-21 12:24:38.828  INFO 1136 --- [http-nio-9001-exec-3] com.caohao.filepan.aspect.LogAspect      : Request : {url='http://localhost:9001/register', ip='127.0.0.1', classMethod='com.caohao.filepan.controller.UserController.register', args=[User(id=null, userName=test1, nickName=ceshi, password=123456, emial=1224819117@qq.com, status=0)]}
+2020-03-21 12:24:38.878  INFO 1136 --- [http-nio-9001-exec-3] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2020-03-21 12:24:39.043  INFO 1136 --- [http-nio-9001-exec-3] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2020-03-21 12:24:39.224  INFO 1136 --- [http-nio-9001-exec-3] com.caohao.filepan.aspect.LogAspect      : Result : redirect:/login
+2020-03-21 12:24:39.272  INFO 1136 --- [http-nio-9001-exec-5] com.caohao.filepan.aspect.LogAspect      : Request : {url='http://localhost:9001/login', ip='127.0.0.1', classMethod='com.caohao.filepan.controller.UserController.login', args=[]}
+2020-03-21 12:24:39.273  INFO 1136 --- [http-nio-9001-exec-5] com.caohao.filepan.aspect.LogAspect      : Result : login
+2020-03-21 12:35:01.377  INFO 9232 --- [restartedMain] com.caohao.filepan.FilepanApplication    : Starting FilepanApplication on DESKTOP-IVAJA2P with PID 9232 (started by ASUS in F:\SSM项目实战练习\filepan)
+2020-03-21 12:35:01.381  INFO 9232 --- [restartedMain] com.caohao.filepan.FilepanApplication    : The following profiles are active: dev
+2020-03-21 12:35:01.446  INFO 9232 --- [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2020-03-21 12:35:01.447  INFO 9232 --- [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+2020-03-21 12:35:02.676  INFO 9232 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 9001 (http)
+2020-03-21 12:35:02.683  INFO 9232 --- [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2020-03-21 12:35:02.683  INFO 9232 --- [restartedMain] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.31]
+2020-03-21 12:35:02.775  INFO 9232 --- [restartedMain] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2020-03-21 12:35:02.775  INFO 9232 --- [restartedMain] o.s.web.context.ContextLoader            : Root WebApplicationContext: initialization completed in 1328 ms
+2020-03-21 12:35:06.013  INFO 9232 --- [restartedMain] f.a.AutowiredAnnotationBeanPostProcessor : Autowired annotation is not supported on static fields: private static com.caohao.filepan.service.FileService com.caohao.filepan.util.MyFileUtil.fileService
+2020-03-21 12:35:06.208  INFO 9232 --- [restartedMain] o.s.s.concurrent.ThreadPoolTaskExecutor  : Initializing ExecutorService 'applicationTaskExecutor'
+2020-03-21 12:35:06.295  INFO 9232 --- [restartedMain] o.s.b.a.w.s.WelcomePageHandlerMapping    : Adding welcome page template: index
+2020-03-21 12:35:06.530  INFO 9232 --- [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : LiveReload server is running on port 35729
+2020-03-21 12:35:06.577  INFO 9232 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 9001 (http) with context path ''
+2020-03-21 12:35:06.580  INFO 9232 --- [restartedMain] com.caohao.filepan.FilepanApplication    : Started FilepanApplication in 5.765 seconds (JVM running for 8.156)
+2020-03-21 12:35:12.668  INFO 9232 --- [http-nio-9001-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2020-03-21 12:35:12.668  INFO 9232 --- [http-nio-9001-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2020-03-21 12:35:12.685  INFO 9232 --- [http-nio-9001-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 16 ms
+2020-03-21 12:35:12.711  INFO 9232 --- [http-nio-9001-exec-1] com.caohao.filepan.aspect.LogAspect      : Request : {url='http://localhost:9001/registerHtml', ip='127.0.0.1', classMethod='com.caohao.filepan.controller.UserController.registerHtml', args=[]}
+2020-03-21 12:35:12.718  INFO 9232 --- [http-nio-9001-exec-1] com.caohao.filepan.aspect.LogAspect      : Result : register
+2020-03-21 12:35:13.169 ERROR 9232 --- [http-nio-9001-exec-2] o.a.c.c.C.[.[.[/].[dispatcherServlet]    : Servlet.service() for servlet [dispatcherServlet] in context with path [] threw exception [Request processing failed; nested exception is java.lang.IllegalStateException: Cannot call sendError() after the response has been committed] with root cause
+
+java.lang.IllegalStateException: Cannot call sendError() after the response has been committed
+	at org.apache.catalina.connector.ResponseFacade.sendError(ResponseFacade.java:472)
+	at org.springframework.web.servlet.resource.ResourceHttpRequestHandler.handleRequest(ResourceHttpRequestHandler.java:488)
+	at org.springframework.web.servlet.mvc.HttpRequestHandlerAdapter.handle(HttpRequestHandlerAdapter.java:53)
+	at org.springframework.web.servlet.DispatcherServlet.doDispatch(DispatcherServlet.java:1040)
+	at org.springframework.web.servlet.DispatcherServlet.doService(DispatcherServlet.java:943)
+	at org.springframework.web.servlet.FrameworkServlet.processRequest(FrameworkServlet.java:1006)
+	at org.springframework.web.servlet.FrameworkServlet.doGet(FrameworkServlet.java:898)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:634)
+	at org.springframework.web.servlet.FrameworkServlet.service(FrameworkServlet.java:883)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:741)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:231)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	at org.apache.tomcat.websocket.server.WsFilter.doFilter(WsFilter.java:53)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	at org.springframework.web.filter.RequestContextFilter.doFilterInternal(RequestContextFilter.java:100)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:119)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	at org.springframework.web.filter.FormContentFilter.doFilterInternal(FormContentFilter.java:93)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:119)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	at org.springframework.web.filter.CharacterEncodingFilter.doFilterInternal(CharacterEncodingFilter.java:201)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:119)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:202)
+	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:96)
+	at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:541)
+	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:139)
+	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:92)
+	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:74)
+	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:343)
+	at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:367)
+	at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:65)
+	at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:868)
+	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1639)
+	at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:49)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1149)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:624)
+	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:61)
+	at java.lang.Thread.run(Thread.java:748)
+
+2020-03-21 12:35:13.287  INFO 9232 --- [http-nio-9001-exec-3] com.caohao.filepan.aspect.LogAspect      : Request : {url='http://localhost:9001/login', ip='127.0.0.1', classMethod='com.caohao.filepan.controller.UserController.login', args=[]}
+2020-03-21 12:35:13.287  INFO 9232 --- [http-nio-9001-exec-3] com.caohao.filepan.aspect.LogAspect      : Result : login
+2020-03-21 12:35:22.114  INFO 9232 --- [http-nio-9001-exec-4] com.caohao.filepan.aspect.LogAspect      : Request : {url='http://localhost:9001/index', ip='127.0.0.1', classMethod='com.caohao.filepan.controller.FileController.index', args=[org.apache.catalina.session.StandardSessionFacade@5c228adf, {}]}
+2020-03-21 12:35:22.124 ERROR 9232 --- [http-nio-9001-exec-4] c.c.f.config.ControllerExceptionHandler  : Requst URL : http://localhost:9001/index，Exception : {}
+
+java.lang.NullPointerException: null
+	at com.caohao.filepan.controller.FileController.index(FileController.java:47)
+	at com.caohao.filepan.controller.FileController$$FastClassBySpringCGLIB$$cc1d9821.invoke(<generated>)
+	at org.springframework.cglib.proxy.MethodProxy.invoke(MethodProxy.java:218)
+	at org.springframework.aop.framework.CglibAopProxy$CglibMethodInvocation.invokeJoinpoint(CglibAopProxy.java:769)
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:163)
+	at org.springframework.aop.framework.CglibAopProxy$CglibMethodInvocation.proceed(CglibAopProxy.java:747)
+	at org.springframework.aop.framework.adapter.MethodBeforeAdviceInterceptor.invoke(MethodBeforeAdviceInterceptor.java:56)
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:186)
+	at org.springframework.aop.framework.CglibAopProxy$CglibMethodInvocation.proceed(CglibAopProxy.java:747)
+	at org.springframework.aop.aspectj.AspectJAfterAdvice.invoke(AspectJAfterAdvice.java:47)
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:186)
+	at org.springframework.aop.framework.CglibAopProxy$CglibMethodInvocation.proceed(CglibAopProxy.java:747)
+	at org.springframework.aop.framework.adapter.AfterReturningAdviceInterceptor.invoke(AfterReturningAdviceInterceptor.java:55)
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:186)
+	at org.springframework.aop.framework.CglibAopProxy$CglibMethodInvocation.proceed(CglibAopProxy.java:747)
+	at org.springframework.aop.interceptor.ExposeInvocationInterceptor.invoke(ExposeInvocationInterceptor.java:95)
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:186)
+	at org.springframework.aop.framework.CglibAopProxy$CglibMethodInvocation.proceed(CglibAopProxy.java:747)
+	at org.springframework.aop.framework.CglibAopProxy$DynamicAdvisedInterceptor.intercept(CglibAopProxy.java:689)
+	at com.caohao.filepan.controller.FileController$$EnhancerBySpringCGLIB$$4c38ede9.index(<generated>)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at org.springframework.web.method.support.InvocableHandlerMethod.doInvoke(InvocableHandlerMethod.java:190)
+	at org.springframework.web.method.support.InvocableHandlerMethod.invokeForRequest(InvocableHandlerMethod.java:138)
+	at org.springframework.web.servlet.mvc.method.annotation.ServletInvocableHandlerMethod.invokeAndHandle(ServletInvocableHandlerMethod.java:106)
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.invokeHandlerMethod(RequestMappingHandlerAdapter.java:879)
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.handleInternal(RequestMappingHandlerAdapter.java:793)
+	at org.springframework.web.servlet.mvc.method.AbstractHandlerMethodAdapter.handle(AbstractHandlerMethodAdapter.java:87)
+	at org.springframework.web.servlet.DispatcherServlet.doDispatch(DispatcherServlet.java:1040)
+	at org.springframework.web.servlet.DispatcherServlet.doService(DispatcherServlet.java:943)
+	at org.springframework.web.servlet.FrameworkServlet.processRequest(FrameworkServlet.java:1006)
+	at org.springframework.web.servlet.FrameworkServlet.doGet(FrameworkServlet.java:898)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:634)
+	at org.springframework.web.servlet.FrameworkServlet.service(FrameworkServlet.java:883)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:741)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:231)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	at org.apache.tomcat.websocket.server.WsFilter.doFilter(WsFilter.java:53)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	at org.springframework.web.filter.RequestContextFilter.doFilterInternal(RequestContextFilter.java:100)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:119)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	at org.springframework.web.filter.FormContentFilter.doFilterInternal(FormContentFilter.java:93)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:119)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	at org.springframework.web.filter.CharacterEncodingFilter.doFilterInternal(CharacterEncodingFilter.java:201)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:119)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:202)
+	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:96)
+	at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:541)
+	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:139)
+	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:92)
+	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:74)
+	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:343)
+	at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:367)
+	at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:65)
+	at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:868)
+	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1639)
+	at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:49)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1149)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:624)
+	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:61)
+	at java.lang.Thread.run(Thread.java:748)
+
+2020-03-21 12:35:22.125  WARN 9232 --- [http-nio-9001-exec-4] .m.m.a.ExceptionHandlerExceptionResolver : Resolved [java.lang.NullPointerException]
+2020-03-21 12:35:22.232 ERROR 9232 --- [http-nio-9001-exec-4] org.thymeleaf.TemplateEngine             : [THYMELEAF][http-nio-9001-exec-4] Exception processing template "error/error": Error resolving template [error/error], template might not exist or might not be accessible by any of the configured Template Resolvers
+
+org.thymeleaf.exceptions.TemplateInputException: Error resolving template [error/error], template might not exist or might not be accessible by any of the configured Template Resolvers
+	at org.thymeleaf.engine.TemplateManager.resolveTemplate(TemplateManager.java:869)
+	at org.thymeleaf.engine.TemplateManager.parseAndProcess(TemplateManager.java:607)
+	at org.thymeleaf.TemplateEngine.process(TemplateEngine.java:1098)
+	at org.thymeleaf.TemplateEngine.process(TemplateEngine.java:1072)
+	at org.thymeleaf.spring5.view.ThymeleafView.renderFragment(ThymeleafView.java:362)
+	at org.thymeleaf.spring5.view.ThymeleafView.render(ThymeleafView.java:189)
+	at org.springframework.web.servlet.DispatcherServlet.render(DispatcherServlet.java:1373)
+	at org.springframework.web.servlet.DispatcherServlet.processDispatchResult(DispatcherServlet.java:1118)
+	at org.springframework.web.servlet.DispatcherServlet.doDispatch(DispatcherServlet.java:1057)
+	at org.springframework.web.servlet.DispatcherServlet.doService(DispatcherServlet.java:943)
+	at org.springframework.web.servlet.FrameworkServlet.processRequest(FrameworkServlet.java:1006)
+	at org.springframework.web.servlet.FrameworkServlet.doGet(FrameworkServlet.java:898)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:634)
+	at org.springframework.web.servlet.FrameworkServlet.service(FrameworkServlet.java:883)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:741)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:231)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	at org.apache.tomcat.websocket.server.WsFilter.doFilter(WsFilter.java:53)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	at org.springframework.web.filter.RequestContextFilter.doFilterInternal(RequestContextFilter.java:100)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:119)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	at org.springframework.web.filter.FormContentFilter.doFilterInternal(FormContentFilter.java:93)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:119)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	at org.springframework.web.filter.CharacterEncodingFilter.doFilterInternal(CharacterEncodingFilter.java:201)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:119)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:202)
+	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:96)
+	at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:541)
+	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:139)
+	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:92)
+	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:74)
+	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:343)
+	at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:367)
+	at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:65)
+	at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:868)
+	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1639)
+	at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:49)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1149)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:624)
+	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:61)
+	at java.lang.Thread.run(Thread.java:748)
+
+2020-03-21 12:35:22.233 ERROR 9232 --- [http-nio-9001-exec-4] o.a.c.c.C.[.[.[/].[dispatcherServlet]    : Servlet.service() for servlet [dispatcherServlet] in context with path [] threw exception [Request processing failed; nested exception is org.thymeleaf.exceptions.TemplateInputException: Error resolving template [error/error], template might not exist or might not be accessible by any of the configured Template Resolvers] with root cause
+
+org.thymeleaf.exceptions.TemplateInputException: Error resolving template [error/error], template might not exist or might not be accessible by any of the configured Template Resolvers
+	at org.thymeleaf.engine.TemplateManager.resolveTemplate(TemplateManager.java:869)
+	at org.thymeleaf.engine.TemplateManager.parseAndProcess(TemplateManager.java:607)
+	at org.thymeleaf.TemplateEngine.process(TemplateEngine.java:1098)
+	at org.thymeleaf.TemplateEngine.process(TemplateEngine.java:1072)
+	at org.thymeleaf.spring5.view.ThymeleafView.renderFragment(ThymeleafView.java:362)
+	at org.thymeleaf.spring5.view.ThymeleafView.render(ThymeleafView.java:189)
+	at org.springframework.web.servlet.DispatcherServlet.render(DispatcherServlet.java:1373)
+	at org.springframework.web.servlet.DispatcherServlet.processDispatchResult(DispatcherServlet.java:1118)
+	at org.springframework.web.servlet.DispatcherServlet.doDispatch(DispatcherServlet.java:1057)
+	at org.springframework.web.servlet.DispatcherServlet.doService(DispatcherServlet.java:943)
+	at org.springframework.web.servlet.FrameworkServlet.processRequest(FrameworkServlet.java:1006)
+	at org.springframework.web.servlet.FrameworkServlet.doGet(FrameworkServlet.java:898)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:634)
+	at org.springframework.web.servlet.FrameworkServlet.service(FrameworkServlet.java:883)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:741)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:231)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	at org.apache.tomcat.websocket.server.WsFilter.doFilter(WsFilter.java:53)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	at org.springframework.web.filter.RequestContextFilter.doFilterInternal(RequestContextFilter.java:100)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:119)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	at org.springframework.web.filter.FormContentFilter.doFilterInternal(FormContentFilter.java:93)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:119)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	at org.springframework.web.filter.CharacterEncodingFilter.doFilterInternal(CharacterEncodingFilter.java:201)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:119)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:202)
+	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:96)
+	at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:541)
+	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:139)
+	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:92)
+	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:74)
+	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:343)
+	at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:367)
+	at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:65)
+	at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:868)
+	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1639)
+	at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:49)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1149)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:624)
+	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:61)
+	at java.lang.Thread.run(Thread.java:748)
+
+2020-03-21 12:35:22.260  INFO 9232 --- [http-nio-9001-exec-5] com.caohao.filepan.aspect.LogAspect      : Request : {url='http://localhost:9001/login', ip='127.0.0.1', classMethod='com.caohao.filepan.controller.UserController.login', args=[]}
+2020-03-21 12:35:22.260  INFO 9232 --- [http-nio-9001-exec-5] com.caohao.filepan.aspect.LogAspect      : Result : login
+2020-03-21 12:35:22.286 ERROR 9232 --- [http-nio-9001-exec-6] o.a.c.c.C.[.[.[/].[dispatcherServlet]    : Servlet.service() for servlet [dispatcherServlet] in context with path [] threw exception [Request processing failed; nested exception is java.lang.IllegalStateException: Cannot call sendError() after the response has been committed] with root cause
+
+java.lang.IllegalStateException: Cannot call sendError() after the response has been committed
+	at org.apache.catalina.connector.ResponseFacade.sendError(ResponseFacade.java:472)
+	at org.springframework.web.servlet.resource.ResourceHttpRequestHandler.handleRequest(ResourceHttpRequestHandler.java:488)
+	at org.springframework.web.servlet.mvc.HttpRequestHandlerAdapter.handle(HttpRequestHandlerAdapter.java:53)
+	at org.springframework.web.servlet.DispatcherServlet.doDispatch(DispatcherServlet.java:1040)
+	at org.springframework.web.servlet.DispatcherServlet.doService(DispatcherServlet.java:943)
+	at org.springframework.web.servlet.FrameworkServlet.processRequest(FrameworkServlet.java:1006)
+	at org.springframework.web.servlet.FrameworkServlet.doGet(FrameworkServlet.java:898)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:634)
+	at org.springframework.web.servlet.FrameworkServlet.service(FrameworkServlet.java:883)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:741)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:231)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	at org.apache.tomcat.websocket.server.WsFilter.doFilter(WsFilter.java:53)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	at org.springframework.web.filter.RequestContextFilter.doFilterInternal(RequestContextFilter.java:100)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:119)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	at org.springframework.web.filter.FormContentFilter.doFilterInternal(FormContentFilter.java:93)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:119)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	at org.springframework.web.filter.CharacterEncodingFilter.doFilterInternal(CharacterEncodingFilter.java:201)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:119)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:202)
+	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:96)
+	at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:541)
+	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:139)
+	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:92)
+	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:74)
+	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:343)
+	at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:367)
+	at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:65)
+	at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:868)
+	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1639)
+	at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:49)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1149)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:624)
+	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:61)
+	at java.lang.Thread.run(Thread.java:748)
+
+2020-03-21 12:35:22.300  INFO 9232 --- [http-nio-9001-exec-7] com.caohao.filepan.aspect.LogAspect      : Request : {url='http://localhost:9001/login', ip='127.0.0.1', classMethod='com.caohao.filepan.controller.UserController.login', args=[]}
+2020-03-21 12:35:22.300  INFO 9232 --- [http-nio-9001-exec-7] com.caohao.filepan.aspect.LogAspect      : Result : login

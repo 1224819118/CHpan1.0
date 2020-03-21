@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.w3.org/1999/xhtml">
+<head th:replace="_fragments :: head(~{::title})">
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<!--导航-->
+<nav th:replace="_fragments :: menu(3)" class="ui inverted attached segment m-padded-tb-mini m-shadow-small">
+</nav>
+<!--中间容器-->
+<div class="m-container-small m-padded-tb-big">
+    <div class="ui  container">
+        <div class="ui stackable grid">
+            <div class="eleven wide column">
+                <img src="https://picsum.photos/800/600/?blur" alt="" th:src="@{/images/caohaoimg.jpg}" class="ui rounded image">
+            </div>
+            <dive class="five wide column">
+                <div class="ui top attached segment">
+                    <div class="ui header">
+                        <a href="#" target="_blank" th:href="@{/admin}">关于我</a>
+                    </div>
+                </div>
+                <div class="ui attached segment">
+                    <p class="m-text-thin">曹昊，一个对编程极为热爱的普通本科毕业生，正在不停的探索和学习编程技术</p>
+                    <p><a href="https://me.csdn.net/qq_43147121">csdn:ch1312</a></p>
+                    <p class="m-text-thin">对于程序技术有足够的喜爱，能够自主的学习和进步，对新的技术有很强的学习欲望和不断深入了解的好奇心，并且喜欢做笔记和反复回顾过去知识的习惯。</p>
+                </div>
+                <div class="ui attached segment">
+                    <div class="ui orange basic left pointing label m-margin-tb-tiny">算法</div>
+                    <div class="ui orange basic left pointing label m-margin-tb-tiny">编程</div>
+                    <div class="ui orange basic left pointing label m-margin-tb-tiny">高并发</div>
+                    <div class="ui orange basic left pointing label m-margin-tb-tiny">分布式</div>
+                    <div class="ui orange basic left pointing label m-margin-tb-tiny">重构</div>
+                </div>
+                <div class="ui attached segment">
+                    <div class="ui teal basic left pointing label m-margin-tb-tiny">MySQL</div>
+                    <div class="ui teal basic left pointing label m-margin-tb-tiny">java</div>
+                    <div class="ui teal basic left pointing label m-margin-tb-tiny">js</div>
+                    <div class="ui teal basic left pointing label m-margin-tb-tiny">springBoot</div>
+                    <div class="ui teal basic left pointing label m-margin-tb-tiny">Redis</div>
+                    <div class="ui teal basic left pointing label m-margin-tb-tiny">Git</div>
+                    <div class="ui teal basic left pointing label m-margin-tb-tiny">vue</div>
+                    <div class="ui teal basic left pointing label m-margin-tb-tiny">Linux</div>
+                    <div class="ui teal basic left pointing label m-margin-tb-tiny">SSM</div>
+                    <div class="ui teal basic left pointing label m-margin-tb-tiny">SpringCould</div>
+                    <div class="ui teal basic left pointing label m-margin-tb-tiny">maven</div>
+                    <div class="ui teal basic left pointing label m-margin-tb-tiny">axios</div>
+                </div>
+                <div class="ui bottom attached segment">
+                    <a href="https://github.com/1224819118" class="ui circular button"><i class="github icon"></i></a>
+                    <a href="#" class="ui weixin circular icon button"><i class="weixin icon"></i></a>
+                    <a href="#" class="ui qq circular icon button" data-content="1224819118" data-position="bottom center"><i class="qq icon"></i></a>
+                </div>
+                <div class="ui weixin-qr flowing popup transition hidden">
+                    <img src="../static/images/wechat.jpg" th:src="@{/images/wechat.jpg}" alt="" class="ui rounded image" style="width: 100px;">
+                </div>
+            </dive>
+        </div>
+    </div>
+</div>
+<!--底部-->
+<footer th:replace="_fragments :: footer" class="ui inverted vertical segment m-padded-tb-massive">
+</footer>
+<!--/*/<th:block th:replace="_fragments :: script">/*/-->
+<script src="https://cdn.jsdelivr.net/npm/jquery@3.2/dist/jquery.min.js"></script>
+<script src="https://cdn.jsdelivr.net/semantic-ui/2.2.4/semantic.min.js"></script>
+<!--/*/</th:block>/*/-->
+<script>
+    $('.menu toggle').click(function(){
+        $('.m-item').toggleClass('m-mobile-hide');
+    });
+
+    $('.qq').popup();
+
+    $('.weixin').popup({
+        popup: $('.weixin-qr'),
+        position: 'bottom center'
+    });
+</script>
+</body>
+</html>

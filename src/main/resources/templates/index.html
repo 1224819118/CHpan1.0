@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.w3.org/1999/xhtml">
+<head th:replace="_fragments :: head(~{::title})">
+    <meta charset="UTF-8">
+    <title>我的文件</title>
+</head>
+<body>
+<!--导航-->
+<nav th:replace="_fragments :: menu(1)" class="ui inverted attached segment m-padded-tb-mini m-shadow-small">
+</nav>
+<form id='uploadFile' th:action="@{/upload}" action='/upload' method='POST' enctype='multipart/form-data'>
+   <input type="file" name="uploadFile" value="预览">
+    <input type="submit" value="提交">
+</form>
+<form id="createNewFileDir" action="" method="post" th:action="@{/newFileDIR}">
+    <input type="text" name="fileDirName" id="fileDirName" placeholder="请输入新建文件夹名称">
+    <input type="submit" value="新建文件夹">
+</form>
+<h3 th:unless="${#strings.isEmpty(message)}" th:text="${message}">message</h3>
+<div id="table-container">
+    <table th:fragment="blogList" class="ui compact teal table">
+        <thead>
+        <tr>
+            <th>文件</th>
+            <th>类型</th>
+            <th>操作</th>
+        </tr>
+        </thead>
+        <tbody>
+        <tr th:each="file : ${files}">
+            <td><a href="#"  class="ui mini red basic button" th:href="@{/intoFile/{fatherFileId}(fatherFileId=${file.id})}" th:text="${file.fileName}">我的文件</a></td>
+            <td th:text="${file.fileType.descp}"></td>
+            <td>
+                <a href="#"  class="ui mini red basic button" th:href="@{/deleteFile/{targetFileId}(targetFileId=${file.id})}">删除</a>
+                <a href="#"  class="ui mini green basic button" th:href="@{/downLoadFile/{targetFileId}(targetFileId=${file.id})}">下载</a>
+            </td>
+        </tr>
+        </tbody>
+        <tfoot>
+<!--        <tr>-->
+<!--            <th colspan="7">-->
+<!--                <div class="ui mini pagination menu" th:if="${page.totalPages}>1" >-->
+<!--                    <a onclick="page(this)" th:attr="data-page=${page.number}-1" class="item" th:unless="${page.first}">上一页</a>-->
+<!--                    <a onclick="page(this)" th:attr="data-page=${page.number}+1" class=" item" th:unless="${page.last}">下一页</a>-->
+<!--                </div>-->
+<!--                <a href="#" th:href="@{/admin/blogs/input}" class="ui mini right floated teal basic button">新增</a>-->
+<!--            </th>-->
+<!--        </tr>-->
+        </tfoot>
+    </table>
+</div>
+<footer th:replace="_fragments :: footer"></footer>
+<!--/*/<th:block th:replace="_fragments :: script">/*/-->
+<script src="https://cdn.jsdelivr.net/npm/jquery@3.2/dist/jquery.min.js"></script>
+<script src="https://cdn.jsdelivr.net/semantic-ui/2.2.4/semantic.min.js"></script>
+<!--/*/</th:block>/*/-->
+<script>
+
+</script>
+
+</body>
+</html>
