@@ -32,6 +32,10 @@ public class FileController {
         fileBasePath = MyFileBasePath;
     }
 
+    @RequestMapping("/tt")
+    public String tt(){
+        return "about";
+    }
     /**
      * 转到index页面，并传入参数files
      * @param session
@@ -40,6 +44,7 @@ public class FileController {
      */
     @RequestMapping("/index")
     public String index(HttpSession session, Model model){
+        System.out.println(111);
         //取出已经登陆的用户信息
         User user = (User) session.getAttribute("user");
         //设置查询条件，按照userid查询主文件夹

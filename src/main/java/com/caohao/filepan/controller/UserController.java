@@ -45,6 +45,8 @@ public class UserController {
             model.addAttribute("message","用户名或密码错误");
             return "redirect:/login";
         }else {
+            User user = (User) session.getAttribute("user");
+            System.out.println(user.toString());
             return "redirect:/index";
         }
     }
