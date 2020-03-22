@@ -8,7 +8,8 @@ import java.io.Serializable;
 
 @Data
 @TableName("tb_user")
-public class User extends Model<User> {
+public class User extends Model<User> implements Cloneable{
+
     //设置主键我使用的是包装类，包装类可以为空，所以可以减少应为基本类型默认值的问题
     @TableId(type=IdType.AUTO)
     private Integer id;
@@ -31,5 +32,22 @@ public class User extends Model<User> {
     @Override
     protected Serializable pkVal() {
         return id;
+    }
+
+    /**
+     * 写一个满足自己需求的拷贝函数
+     * @return
+     * @throws CloneNotSupportedException
+     */
+    @Override
+    public Object clone() {
+        User user = new User();
+        user.setId(this.id);
+        user.setPassword("*****");
+        user.setUserName(this.userName);
+        user.setEmial(this.emial);
+        user.setNickName(this.nickName);
+        user.setStatus(this.status);
+        return user;
     }
 }

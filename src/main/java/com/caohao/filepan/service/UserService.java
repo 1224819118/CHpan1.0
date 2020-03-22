@@ -9,6 +9,7 @@ import com.caohao.filepan.dao.FileDao;
 import com.caohao.filepan.dao.UserDao;
 import com.caohao.filepan.entity.File;
 import com.caohao.filepan.entity.User;
+import com.caohao.filepan.util.MyCacheUtil;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
@@ -38,6 +39,8 @@ public class UserService extends ServiceImpl<UserDao,User> {
         String src = selectOne.getUserName();
         newFile.setUrl(src);
         newFile.insert();
+        //更新userCache
+        MyCacheUtil.updateUserCache(userDao);
         //返回新插入的user对象
        return selectOne;
     }
@@ -45,17 +48,24 @@ public class UserService extends ServiceImpl<UserDao,User> {
      * 用户登录
      */
     public User login(String userName, String password, HttpSession session){
-        //设置条件查询
-        QueryWrapper<User> queryWrapper = new QueryWrapper<>();
-        queryWrapper.eq("user_name",userName).eq("password",password);
-        //查出这个符合条件的user对象，如果不存在则报出未找到错误
-        User user = userDao.selectOne(queryWrapper);
-        if (user==null){
-            return user;
-        }else {
-            //将用户对象存入session，并设置密码为***
-            user.setPassword("******");
-            session.setAttribute("user",user);
+        //在第一个在这个系统登录的人会触发初始化缓存的操作
+        if (MyCacheUtil.GetUserCache().size()==0){
+            MyCacheUtil.updateUserCache(userDao);
+        }
+        //从缓存中找到对应的用户
+        User user = MyCacheUtil.getUsetByUserName(userName);
+//        //设置条件查询
+//        QueryWrapper<User> queryWrapper = new QueryWrapper<>();
+//        queryWrapper.eq("user_name",userName).eq("password",password);
+//        //查出这个符合条件的user对象，如果不存在则报出未找到错误
+//        User user1 = userDao.selectOne(queryWrapper);
+        if (user==null||!user.getPassword().equals(password)){//如果不存在这个用户或者是密码错误
+            return null;
+        }else if (user.getPassword().equals(password)){
+            //这边一定要用克隆，而不是缓存中的user对象，应为那会改变缓存中的值使密码改变为*****导致无法二次登录
+            //将用户对象存入session，在重写的克隆方法中设置密码为***
+            User user1 = (User) user.clone();
+            session.setAttribute("user",user1);
         }
         return user;
     }

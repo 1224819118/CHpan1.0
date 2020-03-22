@@ -46,7 +46,6 @@ public class UserController {
             return "redirect:/login";
         }else {
             User user = (User) session.getAttribute("user");
-            System.out.println(user.toString());
             return "redirect:/index";
         }
     }
