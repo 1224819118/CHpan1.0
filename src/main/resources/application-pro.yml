@@ -6,7 +6,7 @@ spring:
     driver-class-name: com.mysql.jdbc.Driver
     url: jdbc:mysql://47.95.7.231:3306/filedatabase?useUnicode=true&characterEncoding=utf-8&useSSL=false
     username: root
-    password: CaoHao_(1224819118)
+    password: 6222688
     #解析resources/静态资源
     mvc:
       static-path-pattern: /**
@@ -16,3 +16,13 @@ logging:
     com.lrm: info
   file: log/blog-pro.log
 
+  #默认的文件上传支持开启
+  servlet:
+    multipart:
+      enabled: true
+      max-file-size: 1024MB
+      max-request-size: 2048MB
+
+#储存文件的共同地址
+MyProperties:
+  MyFileBasePath: /file/pan
