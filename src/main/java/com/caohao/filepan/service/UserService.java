@@ -10,6 +10,7 @@ import com.caohao.filepan.dao.UserDao;
 import com.caohao.filepan.entity.File;
 import com.caohao.filepan.entity.User;
 import com.caohao.filepan.util.MyCacheUtil;
+import com.caohao.filepan.util.RedisCacheUtil;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
@@ -21,6 +22,11 @@ public class UserService extends ServiceImpl<UserDao,User> {
     UserDao userDao;
     @Autowired
     FileDao fileDao;
+    @Autowired
+    RedisCacheUtil redisCacheUtil;
+//    {
+//        redisCacheUtil.updateUserCache(userDao);
+//    }
     /**
      * 用户注册
      */
@@ -40,7 +46,8 @@ public class UserService extends ServiceImpl<UserDao,User> {
         newFile.setUrl(src);
         newFile.insert();
         //更新userCache
-        MyCacheUtil.updateUserCache(userDao);
+        redisCacheUtil.setNewUser(selectOne);
+ //       MyCacheUtil.updateUserCache(userDao);
         //返回新插入的user对象
        return selectOne;
     }
@@ -49,11 +56,12 @@ public class UserService extends ServiceImpl<UserDao,User> {
      */
     public User login(String userName, String password, HttpSession session){
         //在第一个在这个系统登录的人会触发初始化缓存的操作
-        if (MyCacheUtil.GetUserCache().size()==0){
-            MyCacheUtil.updateUserCache(userDao);
-        }
+//        if (MyCacheUtil.GetUserCache().size()==0){
+//            MyCacheUtil.updateUserCache(userDao);
+//        }
         //从缓存中找到对应的用户
-        User user = MyCacheUtil.getUsetByUserName(userName);
+//        User user = MyCacheUtil.getUsetByUserName(userName);
+        User user = redisCacheUtil.getUsetByUserName(userName);
 //        //设置条件查询
 //        QueryWrapper<User> queryWrapper = new QueryWrapper<>();
 //        queryWrapper.eq("user_name",userName).eq("password",password);
@@ -81,10 +89,13 @@ public class UserService extends ServiceImpl<UserDao,User> {
      * 用户删除
      */
     public boolean deleteUser(Integer id){
+        User user = new User();
+        User selectById = user.selectById(id);
         Integer i = userDao.deleteById(id);
         if (i==null){
             return false;
         }else {
+            redisCacheUtil.deleteUser(selectById.getUserName());
             return true;
         }
     }

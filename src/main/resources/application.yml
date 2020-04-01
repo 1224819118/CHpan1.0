@@ -43,3 +43,14 @@ mybatis-plus:
 #    #配置JdbcTypeForNull, oracle数据库必须配置
 #    jdbc-type-for-null: 'null'
 
+#fastdfs配置
+#fdfs:
+#  so-timeout: 2000
+#  connect-timeout: 6010
+#  tracker-list:
+#    - 47.95.7.231:22122
+#fastdfs:
+#  connect_timeout_in_seconds: 30
+#  network_timeout_in_seconds: 60
+#  charset: UTF-8
+#  tracker_servers: 47.95.7.231:22122

@@ -14,11 +14,11 @@ import java.io.Serializable;
 
 @Component("loginInterceptor")
 public class LoginInterceptor implements HandlerInterceptor {
-    @Autowired
-    UserService userService;
+//    @Autowired
+//    UserService userService;
     @Override
     public boolean preHandle(HttpServletRequest request, HttpServletResponse response, Object handler) throws Exception {
-        System.out.println(userService);
+        //System.out.println(userService);
         /**
          * 加入JWT的验证失败了，后续会继续学习并完善这部分内容
          */
